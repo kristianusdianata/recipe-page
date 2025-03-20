@@ -342,7 +342,7 @@ table tbody {
   flex-direction: column;
 }
 
-table tr:nth-child(-n + 3) {
+table tr:not(:last-child) {
   border-bottom: 1px solid var(--stone-150);
 }
 
