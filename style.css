@@ -357,7 +357,7 @@ table th {
 
 table th,
 table td {
-  padding-bottom: 12px;
+  padding-block: 12px;
   font-size: 0.95em;
   flex: 1 0 auto;
   max-width: 40%;
