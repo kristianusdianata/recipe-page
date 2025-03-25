@@ -226,27 +226,24 @@ body {
   margin: 0px;
 }
 
-body {
+html {
   font-size: 16px;
 }
 
 .card {
   background-color: var(--card);
-  padding: 35px;
+}
+
+.main-container {
+  padding: 24px 35px 35px 35px;
 }
 
 img.illustration-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  max-inline-size: 100%;
+  object-fit: contain;
 }
 
 .card-title {
-  margin-top: 200px;
   color: var(--card-foreground);
   margin-bottom: 24px;
   font-size: 2.2em;
@@ -375,16 +372,19 @@ table td {
     background-color: var(--background);
   }
 
+  .main-container {
+    padding: 0px;
+  }
+
   .card {
     background-color: var(--card);
     max-width: 650px;
     margin: 100px 0px;
     border-radius: 18px;
+    padding: 35px;
   }
 
   img.illustration-img {
-    position: relative;
-    height: 270px;
     border-radius: 12px;
   }
 
