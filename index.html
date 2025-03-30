@@ -27,31 +27,31 @@
     </style>
   </head>
   <body>
-    <main>
-      <section class="card">
-        <!-- Image illustration -->
-        <div class="img-container">
-          <img
-            class="illustration-img"
-            src="./assets/images/image-omelette.jpeg"
-            alt="Illustration omellet image"
-          />
-        </div>
+    <div class="container">
+      <div class="card">
+        <header>
+          <!-- Image illustration -->
+          <div class="header-img">
+            <img
+              src="./assets/images/image-omelette.jpeg"
+              alt="Illustration omellet image"
+            />
+          </div>
 
-        <div class="main-container">
-          <!-- Header -->
-          <h1 class="font-young-regular card-title">Simple Omelette Recipe</h1>
-          <p class="font-outfit-regular card-subtitle">
-            An easy and quick dish, perfect for any meal. this classic omellete
-            combines beaten eggs cooked to perfection, optionally filled with
-            your choiceof cheese, vegetables, or meats.
-          </p>
+          <div class="header-content">
+            <h1 class="font-young-regular">Simple Omelette Recipe</h1>
+            <p class="font-outfit-regular">
+              An easy and quick dish, perfect for any meal. this classic
+              omellete combines beaten eggs cooked to perfection, optionally
+              filled with your choiceof cheese, vegetables, or meats.
+            </p>
+          </div>
+        </header>
 
+        <main>
           <!-- Preparations section -->
-          <section class="highlight-section bg-rose-50">
-            <h2 class="highlight-title font-outfit-bold rose-800">
-              Preparation time
-            </h2>
+          <section class="preparation-section bg-rose-50">
+            <h2 class="font-outfit-bold rose-800">Preparation time</h2>
             <ul>
               <li>
                 <p class="font-outfit-regular stone-600">
@@ -157,15 +157,12 @@
           </section>
 
           <!-- Nutrition section -->
-          <section>
-            <h2
-              class="section-title brown-800 font-young-regular"
-              style="margin-bottom: 24px"
-            >
+          <section class="main-section">
+            <h2 class="section-title brown-800 font-young-regular">
               Nutrition
             </h2>
-            <p class="font-outfit-regular stone-600">
-              The table below nutritional values per serving without the
+            <p class="font-outfit-regular stone-600 sub-title">
+              The table below shows nutritional values per serving without the
               additional fillings.
             </p>
             <table>
@@ -191,8 +188,8 @@
               </tr>
             </table>
           </section>
-        </div>
-      </section>
-    </main>
+        </main>
+      </div>
+    </div>
   </body>
 </html>
