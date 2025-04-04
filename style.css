@@ -21,27 +21,30 @@
 }
 
 :root {
-  /* Spacing (Padding and Margin) */
-  --spacing-small: 0.5rem;
-  --spacing-medium: 1rem;
-  --spacing-large: 1.5rem;
-  --spacing-extra-large: 2rem;
-
   /* Font Sizes */
-  --font-size-small: 0.5rem;
-  --font-size-base: 0.875rem;
-  --font-size-medium: 1rem;
-  --font-size-large: 1.25rem;
-  --font-size-heading: 2.2rem;
-  --font-size-subheading-base: 1.1rem;
-  --font-size-subheading-medium: 1.55rem;
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-md: 1.125rem; /* 18px */
+  --font-size-lg: 1.25rem; /* 20px */
+  --font-size-xl: 1.5rem; /* 24px */
+  --font-size-xxl: 2rem; /* 32px */
+
+  /* Spacing (Padding and Margin) */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem; /* 8px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-xxl: 3rem; /* 48px */
 
   /* Border Radius */
-  --border-radius-small: 0.25rem;
-  --border-radius-medium: 0.5rem;
-  --border-radius-large: 1rem;
-  --border-radius-extra-large: 1.5rem;
-  --border-radius-full: 50%;
+  --border-radius-xs: 0.125rem; /* 2px */
+  --border-radius-sm: 0.25rem; /* 4px */
+  --border-radius-md: 0.5rem; /* 8px */
+  --border-radius-lg: 1rem; /* 16px */
+  --border-radius-xl: 1.5rem; /* 24px */
+  --border-radius-full: 50%; /* rounded full */
 
   /* Typography */
   --outfit-regular: "Outfit Regular";
@@ -137,68 +140,68 @@ body {
 
 .card {
   background-color: var(--card);
-  border-radius: var(--border-radius-large);
-  max-inline-size: 40.5rem;
-  padding: var(--spacing-extra-large);
-  margin-block: var(--spacing-medium);
+  border-radius: var(--border-radius-lg);
+  max-inline-size: 38rem;
+  padding: var(--spacing-xl);
+  margin-block: var(--spacing-md);
 }
 
 header {
-  margin-block-end: var(--spacing-extra-large);
+  margin-block-end: var(--spacing-lg);
 }
 
 header img {
   max-inline-size: 100%;
   max-block-size: 100%;
   object-fit: contain;
-  border-radius: var(--border-radius-medium);
-  margin-block-end: var(--spacing-extra-large);
+  border-radius: var(--border-radius-md);
+  margin-block-end: var(--spacing-xl);
 }
 
 header h1 {
   color: var(--card-foreground);
-  font-size: var(--font-size-heading);
-  margin-block-end: var(--spacing-medium);
+  font-size: var(--font-size-xxl);
+  margin-block-end: var(--spacing-lg);
 }
 
 header p {
   color: var(--card-muted);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-sm);
 }
 
 main .preparation-section {
-  padding: var(--spacing-large);
-  border-radius: var(--border-radius-medium);
-  margin-block-end: var(--spacing-extra-large);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  margin-block-end: var(--spacing-xl);
 }
 
 main .main-section:not(:last-child) {
-  padding-block-end: var(--spacing-large);
-  margin-block-end: var(--spacing-extra-large);
+  padding-block-end: var(--spacing-lg);
+  margin-block-end: var(--spacing-lg);
   border-block-end: 1px solid var(--stone-150);
 }
 
 main .preparation-section h2,
 main .main-section h2 {
-  margin-block-end: var(--spacing-medium);
+  margin-block-end: var(--spacing-md);
 }
 
 main .preparation-section h2 {
-  font-size: var(--font-size-subheading-base);
+  font-size: var(--font-size-base);
 }
 
 main .main-section h2 {
-  font-size: var(--font-size-subheading-medium);
+  font-size: var(--font-size-xl);
 }
 
 main .main-section .sub-title {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-sm);
 }
 
 ul,
 ol {
-  padding-inline-start: var(--spacing-small);
-  font-size: var(--font-size-base);
+  padding-inline-start: var(--spacing-sm);
+  font-size: var(--font-size-sm);
   list-style-type: none;
 }
 
@@ -208,7 +211,7 @@ ol {
 
 ul li,
 ol li {
-  margin-block-end: var(--spacing-small);
+  margin-block-end: var(--spacing-sm);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -221,8 +224,8 @@ ol li {
 
 ul li::before {
   content: "";
-  height: 0.25rem;
-  width: 0.25rem;
+  height: 0.25em;
+  width: 0.25em;
   border-radius: 100%;
   flex-shrink: 0;
 }
@@ -244,13 +247,13 @@ ol li::before {
 
 ul li p,
 ol li p {
-  padding-inline: var(--spacing-large);
+  padding-inline: var(--spacing-md);
 }
 
 table {
-  margin-block-start: 0.8rem;
+  margin-block-start: var(--spacing-md);
   border-collapse: collapse;
-  width: 100%;
+  inline-size: 100%;
 }
 
 table tbody {
@@ -273,8 +276,8 @@ table th {
 
 table th,
 table td {
-  padding-block: 12px;
-  font-size: var(--font-size-base);
+  padding-block: var(--spacing-sm);
+  font-size: var(--font-size-sm);
   flex: 1 0 auto;
   max-inline-size: 45%;
 }
@@ -303,10 +306,10 @@ table td {
   }
 
   header .header-title {
-    padding-inline: var(--spacing-extra-large);
+    padding-inline: var(--spacing-xl);
   }
 
   main {
-    padding: var(--spacing-extra-large);
+    padding: var(--spacing-xl);
   }
 }
