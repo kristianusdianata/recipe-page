@@ -28,7 +28,9 @@
   --font-size-md: 1.125rem; /* 18px */
   --font-size-lg: 1.25rem; /* 20px */
   --font-size-xl: 1.5rem; /* 24px */
-  --font-size-xxl: 2rem; /* 32px */
+  --font-size-xxl: 1.75rem; /* 28px */
+  --font-size-xxxl: 2rem; /* 32px */
+  --font-size-xxxxl: 2.5rem; /* 40px */
 
   /* Spacing (Padding and Margin) */
   --spacing-xs: 0.25rem; /* 4px */
@@ -36,15 +38,14 @@
   --spacing-md: 1rem; /* 16px */
   --spacing-lg: 1.5rem; /* 24px */
   --spacing-xl: 2rem; /* 32px */
-  --spacing-xxl: 3rem; /* 48px */
+  --spacing-xxl: 2.5rem; /* 40px */
 
   /* Border Radius */
-  --border-radius-xs: 0.125rem; /* 2px */
-  --border-radius-sm: 0.25rem; /* 4px */
-  --border-radius-md: 0.5rem; /* 8px */
-  --border-radius-lg: 1rem; /* 16px */
-  --border-radius-xl: 1.5rem; /* 24px */
-  --border-radius-full: 50%; /* rounded full */
+  --radius-xs: 0.125rem; /* 2px */
+  --radius-sm: 0.25rem; /* 4px */
+  --radius-md: 0.5rem; /* 8px */
+  --radius-lg: 1rem; /* 16px */
+  --radius-xl: 1.5rem; /* 24px */
 
   /* Typography */
   --outfit-regular: "Outfit Regular";
@@ -140,68 +141,65 @@ body {
 
 .card {
   background-color: var(--card);
-  border-radius: var(--border-radius-lg);
-  max-inline-size: 38rem;
-  padding: var(--spacing-xl);
-  margin-block: var(--spacing-md);
+  border-radius: var(--radius-xl);
+  max-inline-size: 46rem;
+  padding: var(--spacing-xxl);
+  margin: var(--spacing-md);
 }
 
 header {
-  margin-block-end: var(--spacing-lg);
+  margin-block-end: var(--spacing-xl);
 }
 
 header img {
   max-inline-size: 100%;
   max-block-size: 100%;
   object-fit: contain;
-  border-radius: var(--border-radius-md);
+  border-radius: var(--radius-lg);
   margin-block-end: var(--spacing-xl);
 }
 
 header h1 {
   color: var(--card-foreground);
-  font-size: var(--font-size-xxl);
+  font-size: var(--font-size-xxxxl);
   margin-block-end: var(--spacing-lg);
 }
 
 header p {
   color: var(--card-muted);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
 }
 
 main .preparation-section {
   padding: var(--spacing-lg);
-  border-radius: var(--border-radius-md);
+  border-radius: var(--radius-md);
   margin-block-end: var(--spacing-xl);
 }
 
 main .main-section:not(:last-child) {
-  padding-block-end: var(--spacing-lg);
-  margin-block-end: var(--spacing-lg);
+  padding-block-end: var(--spacing-md);
+  margin-block-end: var(--spacing-xl);
   border-block-end: 1px solid var(--stone-150);
 }
 
-main .preparation-section h2,
-main .main-section h2 {
-  margin-block-end: var(--spacing-md);
-}
-
 main .preparation-section h2 {
-  font-size: var(--font-size-base);
+  margin-block-end: var(--spacing-md);
+  font-size: var(--font-size-lg);
 }
 
 main .main-section h2 {
-  font-size: var(--font-size-xl);
+  margin-block-end: var(--spacing-lg);
+  font-size: var(--font-size-xxl);
 }
 
 main .main-section .sub-title {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
 }
 
 ul,
 ol {
   padding-inline-start: var(--spacing-sm);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
   list-style-type: none;
 }
 
@@ -247,11 +245,11 @@ ol li::before {
 
 ul li p,
 ol li p {
-  padding-inline: var(--spacing-md);
+  padding-inline: var(--spacing-lg);
 }
 
 table {
-  margin-block-start: var(--spacing-md);
+  margin-block-start: var(--spacing-lg);
   border-collapse: collapse;
   inline-size: 100%;
 }
@@ -277,7 +275,7 @@ table th {
 table th,
 table td {
   padding-block: var(--spacing-sm);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
   flex: 1 0 auto;
   max-inline-size: 45%;
 }
@@ -292,7 +290,7 @@ table td {
 
   .card {
     border-radius: 0px;
-    margin-block: 0px;
+    margin: 0px;
     padding: 0px;
     max-inline-size: 100%;
   }
@@ -307,6 +305,10 @@ table td {
 
   header .header-title {
     padding-inline: var(--spacing-xl);
+  }
+
+  header h1 {
+    font-size: var(--font-size-xxxl);
   }
 
   main {
