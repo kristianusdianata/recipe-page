@@ -185,7 +185,7 @@ body {
 .card header {
   margin-block-end: var(--spacing-xl);
 
-  & .container-img {
+  & .img-wrapper {
     inline-size: 100%;
     block-size: 18.75rem;
     overflow: hidden;
@@ -199,7 +199,7 @@ body {
     }
   }
 
-  & .container-title {
+  & .title-wrapper {
     & h1 {
       color: var(--card-foreground);
       font-size: var(--font-size-4xl);
@@ -222,7 +222,7 @@ body {
   Card main CSS 
   ----------------------------------------
 */
-main #preparation.container-section {
+main section#preparation {
   padding: var(--spacing-lg);
   border-radius: var(--radius-md);
   margin-block-end: var(--spacing-xl);
@@ -233,7 +233,7 @@ main #preparation.container-section {
   }
 }
 
-main .container-section:not(#preparation) {
+main section:not(#preparation) {
   & h2 {
     margin-block-end: var(--spacing-lg);
     font-size: var(--font-size-2xl);
@@ -244,7 +244,7 @@ main .container-section:not(#preparation) {
   }
 }
 
-main .container-section:not(#preparation):not(:last-child) {
+main section:not(#preparation):not(:last-child) {
   padding-block-end: var(--spacing-md);
   margin-block-end: var(--spacing-xl);
   border-block-end: 1px solid var(--stone-150);
@@ -380,12 +380,12 @@ ol.custome-list {
   .card header {
     margin-block-end: 0px;
 
-    & .container-img {
+    & .img-wrapper {
       border-radius: 0px;
       block-size: 10.688rem;
     }
 
-    & .container-title {
+    & .title-wrapper {
       padding-inline: var(--spacing-xl);
     }
   }
