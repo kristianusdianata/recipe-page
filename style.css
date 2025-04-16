@@ -113,10 +113,6 @@
   Text color css
   ----------------------------------------
 */
-.bg-rose-50 {
-  background-color: var(--rose-50);
-}
-
 .rose-800 {
   color: var(--rose-800);
 }
