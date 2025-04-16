@@ -19,13 +19,14 @@
     <div class="container">
       <div class="card">
         <header>
-          <!-- Image illustration -->
-          <img
-            src="./assets/images/image-omelette.jpeg"
-            alt="Illustration omellet image"
-          />
+          <div class="container-img">
+            <img
+              src="./assets/images/image-omelette.jpeg"
+              alt="Illustration omellet image"
+            />
+          </div>
 
-          <div class="header-title">
+          <div class="container-title">
             <h1 class="font-young-regular">Simple Omelette Recipe</h1>
             <p class="font-outfit-regular">
               An easy and quick dish, perfect for any meal. this classic
@@ -36,36 +37,36 @@
         </header>
 
         <main>
-          <!-- Preparations section -->
-          <section class="preparation-section bg-rose-50">
+          <section id="preparation" class="container-section bg-rose-50">
             <h2 class="font-outfit-bold rose-800">Preparation time</h2>
-            <ul>
+            <ul class="custome-list">
               <li>
                 <p class="font-outfit-regular stone-600">
                   <b class="stone-600 font-outfit-bold">Total</b>: Approximately
-                  10 minutes
+                  <time datetime="PT10M">10 minutes</time>
                 </p>
               </li>
               <li>
                 <p class="font-outfit-regular stone-600">
-                  <b class="stone-600 font-outfit-bold">Preparation</b>: 5
-                  minutes
+                  <b class="stone-600 font-outfit-bold">Preparation</b>:
+                  <time datetime="PT10M">5 minutes</time>
                 </p>
               </li>
               <li>
                 <p class="font-outfit-regular stone-600">
-                  <b class="stone-600 font-outfit-bold">Cooking</b>: 5 minutes
+                  <b class="stone-600 font-outfit-bold">Cooking</b>:
+                  <time datetime="PT10M">5 minutes</time>
                 </p>
               </li>
             </ul>
           </section>
 
           <!-- Ingredients section -->
-          <section class="main-section">
+          <section class="container-section">
             <h2 class="section-title brown-800 font-young-regular">
               Ingredients
             </h2>
-            <ul>
+            <ul class="custome-list">
               <li>
                 <p class="font-outfit-regular stone-600">2-3 large eggs</p>
               </li>
@@ -90,11 +91,11 @@
           </section>
 
           <!-- Instructions section -->
-          <section class="main-section">
+          <section class="container-section">
             <h2 class="section-title brown-800 font-young-regular">
               Instructions
             </h2>
-            <ol>
+            <ol class="custome-list">
               <li>
                 <p class="font-outfit-regular stone-600">
                   <b class="stone-600 font-outfit-bold">Beat the eggs</b>: In a
@@ -144,7 +145,7 @@
           </section>
 
           <!-- Nutrition section -->
-          <section class="main-section">
+          <section class="container-section">
             <h2 class="section-title brown-800 font-young-regular">
               Nutrition
             </h2>
@@ -152,7 +153,7 @@
               The table below shows nutritional values per serving without the
               additional fillings.
             </p>
-            <table>
+            <table class="custome-table">
               <tr>
                 <th scope="row" class="font-outfit-regular stone-600">
                   Calories
