@@ -157,6 +157,8 @@ html {
 
 body {
   background-color: var(--background);
+  display: flex;
+  justify-content: center;
 }
 
 .container {
@@ -166,9 +168,13 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  justify-self: center;
 }
 
+/* 
+  ---------------------------------------- 
+  Card CSS
+  ----------------------------------------
+*/
 .card {
   background-color: var(--card);
   border-radius: var(--radius-xl);
@@ -177,91 +183,75 @@ body {
   margin: var(--spacing-md);
 }
 
-/* 
-  ---------------------------------------- 
-  Card header CSS
-  ----------------------------------------
-*/
-.card header {
+.card .img-container {
+  inline-size: 100%;
+  block-size: 18.75rem;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
   margin-block-end: var(--spacing-xl);
 
-  & .img-wrapper {
+  & img {
     inline-size: 100%;
-    block-size: 18.75rem;
-    overflow: hidden;
-    border-radius: var(--radius-lg);
-    margin-block-end: var(--spacing-xl);
-
-    & img {
-      inline-size: 100%;
-      block-size: 100%;
-      object-fit: cover;
-    }
-  }
-
-  & .title-wrapper {
-    & h1 {
-      color: var(--card-foreground);
-      font-size: var(--font-size-4xl);
-      margin-block-end: var(--spacing-lg);
-    }
-    & p {
-      color: var(--card-muted);
-      font-size: var(--font-size-base);
-    }
+    block-size: 100%;
+    object-fit: cover;
   }
 }
-/* 
-  ---------------------------------------- 
-  Card header CSS end here
-  ----------------------------------------
-*/
 
-/* 
-  ---------------------------------------- 
-  Card main CSS 
-  ----------------------------------------
-*/
-main section#preparation {
-  padding: var(--spacing-lg);
-  border-radius: var(--radius-md);
+.card .title-wrapper {
   margin-block-end: var(--spacing-xl);
 
-  & h2 {
-    margin-block-end: var(--spacing-md);
-    font-size: var(--font-size-lg);
-  }
-}
-
-main section:not(#preparation) {
-  & h2 {
+  & h1 {
+    color: var(--card-foreground);
+    font-size: var(--font-size-4xl);
     margin-block-end: var(--spacing-lg);
-    font-size: var(--font-size-2xl);
   }
-
-  & p.sub-title {
+  & p {
+    color: var(--card-muted);
     font-size: var(--font-size-base);
   }
 }
 
-main section:not(#preparation):not(:last-child) {
-  padding-block-end: var(--spacing-md);
-  margin-block-end: var(--spacing-xl);
-  border-block-end: 1px solid var(--stone-150);
+.card .content-wrapper {
+  & section#preparation {
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    margin-block-end: var(--spacing-xl);
+
+    & h2 {
+      margin-block-end: var(--spacing-md);
+      font-size: var(--font-size-lg);
+    }
+  }
+
+  & section:not(#preparation) {
+    & h2 {
+      margin-block-end: var(--spacing-lg);
+      font-size: var(--font-size-2xl);
+    }
+
+    & p.sub-title {
+      font-size: var(--font-size-base);
+    }
+  }
+
+  & section:not(#preparation):not(:last-child) {
+    padding-block-end: var(--spacing-md);
+    margin-block-end: var(--spacing-xl);
+    border-block-end: 1px solid var(--stone-150);
+  }
 }
 /* 
   ---------------------------------------- 
-  Card main CSS end here
+  Card CSS end here
   ----------------------------------------
 */
 
 /* 
   ---------------------------------------- 
-  Custome list CSS 
+  Custom list CSS 
   ----------------------------------------
 */
-
-.custome-list {
+.custom-list {
   padding-inline-start: var(--spacing-sm);
   font-size: var(--font-size-base);
   list-style-type: none;
@@ -278,7 +268,7 @@ main section:not(#preparation):not(:last-child) {
   }
 }
 
-ul.custome-list li::before {
+ul.custom-list li::before {
   content: "";
   height: 0.25em;
   width: 0.25em;
@@ -287,11 +277,11 @@ ul.custome-list li::before {
   background-color: var(--brown-800);
 }
 
-#preparation ul.custome-list li::before {
+#preparation ul.custom-list li::before {
   background-color: var(--rose-800);
 }
 
-ol.custome-list {
+ol.custom-list {
   counter-reset: list-counter; /* Reset counter */
 
   & li {
@@ -306,19 +296,18 @@ ol.custome-list {
     }
   }
 }
-
 /* 
   ---------------------------------------- 
-  Custome list CSS end here
+  Custom list CSS end here
   ----------------------------------------
 */
 
 /* 
   ---------------------------------------- 
-  Custome table CSS
+  Custom table CSS
   ----------------------------------------
 */
-.custome-table {
+.custom-table {
   margin-block-start: var(--spacing-lg);
   border-collapse: collapse;
   inline-size: 100%;
@@ -351,7 +340,7 @@ ol.custome-list {
 }
 /* 
   ---------------------------------------- 
-  Custome table CSS end here
+  Custom table CSS end here
   ----------------------------------------
 */
 
@@ -365,6 +354,11 @@ ol.custome-list {
     max-inline-size: 600px;
   }
 
+  /* 
+    ---------------------------------------- 
+    Card CSS
+    ----------------------------------------
+  */
   .card {
     border-radius: 0px;
     margin: 0px;
@@ -372,41 +366,26 @@ ol.custome-list {
     max-inline-size: 100%;
   }
 
-  /* 
-    ---------------------------------------- 
-    Card header CSS
-    ----------------------------------------
-  */
-  .card header {
+  .card .img-container {
+    border-radius: 0px;
+    block-size: 10.688rem;
+  }
+
+  .card .title-wrapper {
+    padding-inline: var(--spacing-xl);
     margin-block-end: 0px;
 
-    & .img-wrapper {
-      border-radius: 0px;
-      block-size: 10.688rem;
-    }
-
-    & .title-wrapper {
-      padding-inline: var(--spacing-xl);
+    & h1 {
+      font-size: var(--font-size-3xl);
     }
   }
-  /* 
-    ---------------------------------------- 
-    Card header CSS end here
-    ----------------------------------------
-  */
 
-  /* 
-    ---------------------------------------- 
-    Card main CSS 
-    ----------------------------------------
-  */
-  main {
+  .card .content-wrapper {
     padding: var(--spacing-xl);
   }
-
   /* 
     ---------------------------------------- 
-    Card main CSS end here
+    Card CSS end here
     ----------------------------------------
   */
 }
