@@ -22,30 +22,30 @@
 
 :root {
   /* Font Sizes */
-  --font-size-xs: 0.75rem; /* 12px */
-  --font-size-sm: 0.875rem; /* 14px */
-  --font-size-base: 1rem; /* 16px */
-  --font-size-md: 1.125rem; /* 18px */
-  --font-size-lg: 1.25rem; /* 20px */
-  --font-size-xl: 1.5rem; /* 24px */
-  --font-size-xxl: 1.75rem; /* 28px */
-  --font-size-xxxl: 2rem; /* 32px */
-  --font-size-xxxxl: 2.5rem; /* 40px */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 1.75rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
 
   /* Spacing (Padding and Margin) */
-  --spacing-xs: 0.25rem; /* 4px */
-  --spacing-sm: 0.5rem; /* 8px */
-  --spacing-md: 1rem; /* 16px */
-  --spacing-lg: 1.5rem; /* 24px */
-  --spacing-xl: 2rem; /* 32px */
-  --spacing-xxl: 2.5rem; /* 40px */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 2.5rem;
 
   /* Border Radius */
-  --radius-xs: 0.125rem; /* 2px */
-  --radius-sm: 0.25rem; /* 4px */
-  --radius-md: 0.5rem; /* 8px */
-  --radius-lg: 1rem; /* 16px */
-  --radius-xl: 1.5rem; /* 24px */
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
 
   /* Typography */
   --outfit-regular: "Outfit Regular";
@@ -74,6 +74,11 @@
   --card-muted: var(--stone-600);
 }
 
+/* 
+  ---------------------------------------- 
+  Font style
+  ----------------------------------------
+*/
 .font-outfit-regular {
   font-family: var(--outfit-regular);
   font-weight: 400;
@@ -97,7 +102,17 @@
   font-weight: 400;
   line-height: 1;
 }
+/* 
+  ---------------------------------------- 
+  Font style end here
+  ----------------------------------------
+*/
 
+/* 
+  ---------------------------------------- 
+  Text color css
+  ----------------------------------------
+*/
 .bg-rose-50 {
   background-color: var(--rose-50);
 }
@@ -113,8 +128,27 @@
 .brown-800 {
   color: var(--brown-800);
 }
+/* 
+  ---------------------------------------- 
+  Text color css end here
+  ----------------------------------------
+*/
 
-/* Component class */
+/* 
+  ---------------------------------------- 
+  Background color css
+  ----------------------------------------
+*/
+.bg-rose-50 {
+  background-color: var(--rose-50);
+}
+
+/* 
+  ---------------------------------------- 
+  Background color css end here
+  ----------------------------------------
+*/
+
 * {
   padding: 0px;
   margin: 0px;
@@ -147,142 +181,189 @@ body {
   margin: var(--spacing-md);
 }
 
-header {
+/* 
+  ---------------------------------------- 
+  Card header CSS
+  ----------------------------------------
+*/
+.card header {
   margin-block-end: var(--spacing-xl);
-}
 
-header img {
-  max-inline-size: 100%;
-  max-block-size: 100%;
-  object-fit: contain;
-  border-radius: var(--radius-lg);
-  margin-block-end: var(--spacing-xl);
-}
+  & .container-img {
+    inline-size: 100%;
+    block-size: 18.75rem;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    margin-block-end: var(--spacing-xl);
 
-header h1 {
-  color: var(--card-foreground);
-  font-size: var(--font-size-xxxxl);
-  margin-block-end: var(--spacing-lg);
-}
+    & img {
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: cover;
+    }
+  }
 
-header p {
-  color: var(--card-muted);
-  font-size: var(--font-size-base);
+  & .container-title {
+    & h1 {
+      color: var(--card-foreground);
+      font-size: var(--font-size-4xl);
+      margin-block-end: var(--spacing-lg);
+    }
+    & p {
+      color: var(--card-muted);
+      font-size: var(--font-size-base);
+    }
+  }
 }
+/* 
+  ---------------------------------------- 
+  Card header CSS end here
+  ----------------------------------------
+*/
 
-main .preparation-section {
+/* 
+  ---------------------------------------- 
+  Card main CSS 
+  ----------------------------------------
+*/
+main #preparation.container-section {
   padding: var(--spacing-lg);
   border-radius: var(--radius-md);
   margin-block-end: var(--spacing-xl);
+
+  & h2 {
+    margin-block-end: var(--spacing-md);
+    font-size: var(--font-size-lg);
+  }
 }
 
-main .main-section:not(:last-child) {
+main .container-section:not(#preparation) {
+  & h2 {
+    margin-block-end: var(--spacing-lg);
+    font-size: var(--font-size-2xl);
+  }
+
+  & p.sub-title {
+    font-size: var(--font-size-base);
+  }
+}
+
+main .container-section:not(#preparation):not(:last-child) {
   padding-block-end: var(--spacing-md);
   margin-block-end: var(--spacing-xl);
   border-block-end: 1px solid var(--stone-150);
 }
+/* 
+  ---------------------------------------- 
+  Card main CSS end here
+  ----------------------------------------
+*/
 
-main .preparation-section h2 {
-  margin-block-end: var(--spacing-md);
-  font-size: var(--font-size-lg);
-}
+/* 
+  ---------------------------------------- 
+  Custome list CSS 
+  ----------------------------------------
+*/
 
-main .main-section h2 {
-  margin-block-end: var(--spacing-lg);
-  font-size: var(--font-size-xxl);
-}
-
-main .main-section .sub-title {
-  font-size: var(--font-size-base);
-}
-
-ul,
-ol {
+.custome-list {
   padding-inline-start: var(--spacing-sm);
   font-size: var(--font-size-base);
   list-style-type: none;
+
+  & li {
+    margin-block-end: var(--spacing-sm);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & p {
+      padding-inline: var(--spacing-lg);
+    }
+  }
 }
 
-ol {
-  counter-reset: list-counter; /* Reset counter */
-}
-
-ul li,
-ol li {
-  margin-block-end: var(--spacing-sm);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-ol li {
-  counter-increment: list-counter;
-  align-items: start;
-}
-
-ul li::before {
+ul.custome-list li::before {
   content: "";
   height: 0.25em;
   width: 0.25em;
   border-radius: 100%;
   flex-shrink: 0;
-}
-
-ol li::before {
-  content: counter(list-counter) ".";
-  flex-shrink: 0;
-  font-family: var(--outfit-bold);
-  color: var(--brown-800);
-}
-
-.preparation-section ul li::before {
-  background-color: var(--rose-800);
-}
-
-.main-section ul li::before {
   background-color: var(--brown-800);
 }
 
-ul li p,
-ol li p {
-  padding-inline: var(--spacing-lg);
+#preparation ul.custome-list li::before {
+  background-color: var(--rose-800);
 }
 
-table {
+ol.custome-list {
+  counter-reset: list-counter; /* Reset counter */
+
+  & li {
+    counter-increment: list-counter;
+    align-items: start;
+
+    &::before {
+      content: counter(list-counter) ".";
+      flex-shrink: 0;
+      font-family: var(--outfit-bold);
+      color: var(--brown-800);
+    }
+  }
+}
+
+/* 
+  ---------------------------------------- 
+  Custome list CSS end here
+  ----------------------------------------
+*/
+
+/* 
+  ---------------------------------------- 
+  Custome table CSS
+  ----------------------------------------
+*/
+.custome-table {
   margin-block-start: var(--spacing-lg);
   border-collapse: collapse;
   inline-size: 100%;
+
+  & tbody {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & tbody tr {
+    display: flex;
+    justify-content: center;
+
+    & th,
+    td {
+      padding-block: var(--spacing-sm);
+      font-size: var(--font-size-base);
+      flex: 1 0 auto;
+      max-inline-size: 45%;
+    }
+
+    & th {
+      text-align: left;
+    }
+  }
+
+  & tbody tr:not(:last-child) {
+    border-bottom: 1px solid var(--stone-150);
+  }
 }
+/* 
+  ---------------------------------------- 
+  Custome table CSS end here
+  ----------------------------------------
+*/
 
-table tbody {
-  display: flex;
-  flex-direction: column;
-}
-
-table tr:not(:last-child) {
-  border-bottom: 1px solid var(--stone-150);
-}
-
-table tr {
-  display: flex;
-  justify-content: center;
-}
-
-table th {
-  text-align: left;
-}
-
-table th,
-table td {
-  padding-block: var(--spacing-sm);
-  font-size: var(--font-size-base);
-  flex: 1 0 auto;
-  max-inline-size: 45%;
-}
-
-/* End of component class */
-
-/* Small device responsive */
+/* 
+  ---------------------------------------- 
+  Small device responsive
+  ----------------------------------------
+*/
 @media (max-width: 600px) {
   .container {
     max-inline-size: 600px;
@@ -295,23 +376,46 @@ table td {
     max-inline-size: 100%;
   }
 
-  header {
+  /* 
+    ---------------------------------------- 
+    Card header CSS
+    ----------------------------------------
+  */
+  .card header {
     margin-block-end: 0px;
-  }
 
-  header img {
-    border-radius: 0px;
-  }
+    & .container-img {
+      border-radius: 0px;
+      block-size: 10.688rem;
+    }
 
-  header .header-title {
-    padding-inline: var(--spacing-xl);
+    & .container-title {
+      padding-inline: var(--spacing-xl);
+    }
   }
+  /* 
+    ---------------------------------------- 
+    Card header CSS end here
+    ----------------------------------------
+  */
 
-  header h1 {
-    font-size: var(--font-size-xxxl);
-  }
-
+  /* 
+    ---------------------------------------- 
+    Card main CSS 
+    ----------------------------------------
+  */
   main {
     padding: var(--spacing-xl);
   }
+
+  /* 
+    ---------------------------------------- 
+    Card main CSS end here
+    ----------------------------------------
+  */
 }
+/* 
+  ---------------------------------------- 
+  Small device responsive end here
+  ----------------------------------------
+*/
