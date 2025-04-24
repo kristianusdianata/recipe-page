@@ -185,7 +185,6 @@ body {
 
 .card .img-container {
   inline-size: 100%;
-  block-size: 18.75rem;
   overflow: hidden;
   border-radius: var(--radius-lg);
   margin-block-end: var(--spacing-xl);
@@ -193,7 +192,7 @@ body {
   & img {
     inline-size: 100%;
     block-size: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 }
 
@@ -368,7 +367,6 @@ ol.custom-list {
 
   .card .img-container {
     border-radius: 0px;
-    block-size: 10.688rem;
   }
 
   .card .title-wrapper {
